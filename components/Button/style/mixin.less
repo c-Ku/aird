@@ -1,0 +1,22 @@
+.button--size(@padding, @fontSize, @borderRaidus) {
+  padding: @padding;
+  font-size: @fontSize;
+  border-radius: @borderRaidus;
+  .@{button__prefix}__icon {
+    width: @fontSize;
+    height: @fontSize;
+  }
+}
+
+.button--type(@bgColor, @color, @border) {
+  background-color: @bgColor;
+  color: @color;
+  border: @border;
+}
+
+.button--disabled() {
+  background-color: #f7f7f7;
+  border-color: #d9d9d9;
+  color: #BFBFBF;
+  box-shadow: none;  
+}
