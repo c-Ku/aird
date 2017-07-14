@@ -1,4 +1,4 @@
-cd styleguide
+cd dist
 git init
 git add -A
 git commit -m 'update docs'

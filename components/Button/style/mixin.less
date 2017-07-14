@@ -1,3 +1,5 @@
+@import '../../style/variable.less';
+
 .button--size(@padding, @fontSize, @borderRaidus) {
   padding: @padding;
   font-size: @fontSize;
@@ -8,10 +10,35 @@
   }
 }
 
-.button--type(@bgColor, @color, @border) {
+.button--type(@bgColor, @color, @lightColor, @darkColor, @selectedColor) {
   background-color: @bgColor;
   color: @color;
-  border: @border;
+  &--loading {
+    pointer-events: none;
+    background-color: @lightColor;
+  }
+  &:focus {
+    background-color: @lightColor;
+    box-shadow: 0 0 0 2px @selectedColor;
+  }
+  &:hover {
+    background-color: @lightColor;
+  }
+  &:active {
+    background-color: @darkColor;
+    box-shadow: 0 0 0 2px @selectedColor;
+  }
+  &[disabled]:hover,
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled] {
+    cursor: not-allowed;
+    text-decoration: none;
+    box-shadow: none;
+    background-color: @disable;
+    color: @font-color-disable;
+    border-color: @border;
+  }
 }
 
 .button--disabled() {

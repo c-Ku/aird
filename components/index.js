@@ -1,3 +1,2 @@
-export { default as Button } from './components/Button'
-export { default as ButtonGroup } from './components/ButtonGroup'
-export { default as Icon } from './components/Icon'
+export { default as Button } from './Button'
+export { default as Icon } from './Icon'
